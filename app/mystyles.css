@@ -1,0 +1,23 @@
+.header-navigation-items {
+    padding: 0 0 200px;
+  }
+  .header-navigation-items groupui-headline {
+    flex: 1;
+    color: var(--groupui-vwag-color-white);
+  }
+  
+  .header-navigation-items groupui-header {
+    border-radius: 2px 2px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-navigation-items groupui-divider {
+    height: 48px; 
+    margin: 0 16px; 
+  }
+  
+  .header-navigation-items .popover-content {
+    width:180px; 
+    padding: 1rem;
+  }

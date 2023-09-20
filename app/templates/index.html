@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>To-Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getTask() {
+            //This performs a POST-Request.
+            //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
+            //The Browser downloads the webpage from the given url, and returns the data.
+            $.post( "http://hostserver.com/MEApp/MEService", function( data ) {
+                 //As soon as the browser finished downloading, this function is called.
+                 $('#demo').html(data);
+            })
+            
+            return getTask();
+        }
+    </script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Example Code -->
+    <h1>To-DO Application</h1>
+    <form>
+      <div class="mb-3">
+        <label for="Task" class="form-label">Enter the Task Name</label>
+        <input type="Task Name" class="form-control" id="taskid" aria-describedby="emailHelp">
+        <div id="taskHelp" class="form-text">You can search the created task later</div>
+      </div>
+      <button onclick="getTask()" type="submit" class="btn btn-primary">Create</button>
+
+      
+    </form>
+    <form>
+        <div class="mb-3">
+          <label for="Task" class="form-label">Enter the Task ID</label>
+          <input type="Task Name" class="form-control" id="taskid" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    
+    <!-- End Example Code -->
+  </body>
+</html>
